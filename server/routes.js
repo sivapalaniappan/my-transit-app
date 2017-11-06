@@ -15,9 +15,6 @@ export default function apiRoutes(app) {
 
     findNextDepartureTime(route, stop, direction)
       .then(data => res.json(data))
-      .catch(error => {
-        console.log('comeing to this catch block')
-        res.json(error)
-      });
+      .catch(error => res.json(error));
   });
 }
