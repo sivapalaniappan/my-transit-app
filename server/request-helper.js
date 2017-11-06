@@ -13,10 +13,10 @@ export function buildRequest(uri) {
     return request;
 }
 
-export default function getData(uri) {
+export function getData(uri) {
     const request = exports.buildRequest(uri);
 
-    return requestPromiseGet(request)
+    return exports.requestPromiseGet(request)
         .then(data => Promise.resolve(data))
         .catch(err => {
           const response = {

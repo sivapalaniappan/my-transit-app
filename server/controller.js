@@ -1,6 +1,6 @@
 const timestamp = require('unix-timestamp');
 import moment from 'moment';
-import getData from './request-helper';
+import { getData } from './request-helper';
 import _ from 'lodash';
 
 export default function findNextDepartureTime (routeName, stopName, directionName) {
@@ -23,7 +23,7 @@ export default function findNextDepartureTime (routeName, stopName, directionNam
             .then(stopId => {
 
               if(!stopId) {
-                return 'This is not a valid stop for this bud route';
+                return 'This is not a valid stop for this bus route';
               }
 
               const tripInformation = {

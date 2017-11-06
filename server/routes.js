@@ -1,4 +1,4 @@
-import findNextDepartureTime from './departure-time-processor';
+import findNextDepartureTime from './controller';
 
 export default function apiRoutes(app) {
   app.get('/api/getNextBusTime', (req, res) => {
